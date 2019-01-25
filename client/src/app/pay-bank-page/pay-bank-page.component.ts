@@ -75,7 +75,6 @@ export class PayBankPageComponent implements OnInit {
     if (this.isFormValid) {
       alert(`Form is valid, request can be sent: ${JSON.stringify(toBeSent, null, 2)}`);
       await fetch('/api/pay-bank', {
-        mode: 'no-cors',
         method: 'POST',
         headers: {
           'Accept': 'application/json',
