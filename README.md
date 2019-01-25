@@ -7,7 +7,7 @@
 ### Установка
 
 ```cmd
-npm setup
+npm run setup
 ```
 
 ### Запуск сервера

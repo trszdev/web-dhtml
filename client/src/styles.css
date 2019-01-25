@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+.body {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.link {
+  color: #0074CA;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #1185DB;
+}
+
+.rainbow-btn {
+  color: #8F9190;
+  border: 1px solid #8F9190;
+  cursor: pointer;
+  padding: 13px 17px;
+  font-size: 90%;
+  font-weight: bold;
+  background: linear-gradient(to bottom right, #FAE4F1, #E7F8FF);
+  box-shadow: 2px 5px 12px -1px #E7F8FF, -6px -5px 12px -1px #FAE4F1;
+  transition: all .4s;
+  outline: none;
+}
+
+.rainbow-btn.disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+.rainbow-btn:not(.disabled):hover {
+  color: #000;
+  border-color: #000;
+  box-shadow: none;
+}

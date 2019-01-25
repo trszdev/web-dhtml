@@ -1,0 +1,40 @@
+.other-fields {
+  margin: 40px 0;
+}
+
+.other-fields > div {
+  display: flex;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.label {
+  min-width: 30%;
+  margin-right: 40px;
+  color: #A3A2A2;
+}
+
+.other-fields > div > :not(:first-child) {
+  width: 50%;
+}
+
+.ndses {
+  margin-left: 10px;
+  margin-top: -10px;
+  position: relative;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.selected {
+  color: #000;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .other-fields > div > :not(:first-child) {
+    width: 100%;
+  }
+}

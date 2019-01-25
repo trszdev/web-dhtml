@@ -1,0 +1,60 @@
+<app-page-template>
+  <div class="other-fields">
+    <p>
+      Сформируйте платёжку, а Индивидуальный предприниматель Шевцова Мария Валерьевна
+      подпишет её у себя в интернет-банке
+    </p>
+    <div>
+      <label class="label" [for]="props.from.id">ИНН получателя</label>
+      <app-field [props]="props.from"></app-field>
+    </div>
+    <div>
+      <label title="Банковский идентификационный код" class="label" [for]="props.bik.id">БИК</label>
+      <app-field [props]="props.bik"></app-field>
+    </div>
+    <div>
+      <label class="label" [for]="props.account.id">Номер счёта</label>
+      <app-field [props]="props.account"></app-field>
+    </div>
+    <div>
+      <label *ngIf="nds === 1" title="Налог на добавленную стоимость" class="label" [for]="props.nds.id">НДС</label>
+      <label *ngIf="nds === 2" title="Налог на добавленную стоимость" class="label" [for]="props.nds2.id">НДС</label>
+      <label *ngIf="nds === 3" title="Налог на добавленную стоимость" class="label" [for]="props.nds3.id">НДС</label>
+      <app-field *ngIf="nds === 1" [props]="props.nds"></app-field>
+      <app-field *ngIf="nds === 2" [props]="props.nds2"></app-field>
+      <app-field *ngIf="nds === 3" [props]="props.nds3"></app-field>
+    </div>
+    <div>
+      <label class="label"></label>
+      <p class="ndses">
+        <a (click)="nds = 1" [class]="nds === 1 ? 'selected link' : 'link'">НДС 18%</a> &nbsp;
+        <a (click)="nds = 2" [class]="nds === 2 ? 'selected link' : 'link'">НДС 10%</a> &nbsp;
+        <a (click)="nds = 3" [class]="nds === 3 ? 'selected link' : 'link'">Без НДС</a> &nbsp;
+      </p>
+    </div>
+    <div>
+      <label class="label" [for]="props.amount.id">Сколько</label>
+      <app-field [props]="props.amount"></app-field>
+    </div>
+    <div>
+      <label class="label" [for]="props.phone.id">Номер телефона</label>
+      <app-field [props]="props.phone"></app-field>
+    </div>
+    <div>
+      <label class="label"></label>
+      <div class="phone-link-container">
+        <a class="link" href="#">Оставляя телефон, вы соглашаетесь на обработку персональных данных</a>
+      </div>
+    </div>
+    <div>
+      <label class="label" [for]="props.email.id">Эл.почта</label>
+      <app-field [props]="props.email"></app-field>
+    </div>
+    <p>
+      <button (click)="onSubmit()" [title]="isFormValid ? '' : 'Форма заполнена неверно'" [class]="'rainbow-btn ' + (isFormValid ? '' : 'disabled')">
+        Создать платёж
+      </button>
+    </p>
+    <p><a class="link" href="#">Очистить форму</a></p>
+  </div>
+</app-page-template>

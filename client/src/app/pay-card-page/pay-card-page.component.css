@@ -1,0 +1,89 @@
+
+.card-page {
+  margin: 40px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.visa {
+  border-radius: 10px;
+  background: #F7F7F7;
+  flex: 0 0;
+  margin-right: 40px;
+  box-sizing: border-box;
+  min-height: 220px;
+  min-width: 380px;
+  position: relative;
+  box-shadow: 10px 15px 40px -8px rgba(153,153,153,1);
+}
+
+.visa-logo {
+  background: no-repeat url('/assets/visa.png');
+  position: absolute;
+  width: 231px;
+  height: 62px;
+  right: -20px;
+  top: 10px;
+  transform: scale(.7);
+}
+
+.visa-fields-container {
+  position: absolute;
+  width: 80%;
+  left: 20px;
+  bottom: 20px;
+}
+
+.other-fields {
+  flex: 1 1 auto;
+}
+
+.other-fields > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+.other-fields > div > :not(:first-child) {
+  width: 100%;
+}
+
+.label {
+  min-width: 30%;
+  margin-right: 20px;
+}
+
+.visa-fields-2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.visa-fields-2 > :first-child {
+  margin-right: 40px;
+  width: 40%;
+}
+
+.visa-fields-2 > :not(:first-child) {
+  flex: 0 0 37%;
+}
+
+@media (max-width: 768px) {
+  .card-page {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visa {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  .other-fields {
+    width: 100%;
+  }
+}

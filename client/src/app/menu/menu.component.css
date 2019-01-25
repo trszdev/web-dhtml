@@ -1,0 +1,32 @@
+.link {
+  display: inline-block;
+}
+
+.menu > .link {
+  font-size: 150%;
+  margin: 20px 40px 20px 0px;
+}
+
+.link.selected {
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+}
+
+.submenu, .menu {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.submenu > .link.selected {
+  background: #F4F4F4;
+}
+
+.submenu > .link:not(.selected):hover {
+  background: #FAFAFA;
+}
+
+.submenu > .link {
+  padding: 8px 25px;
+  margin-right: 20px;
+}

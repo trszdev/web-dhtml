@@ -1,0 +1,31 @@
+<app-page-template>
+  <div class="card-page">
+    <div class="visa">
+      <div class="visa-logo"></div>
+      <div class="visa-fields-container">
+        <div class="visa-fields">
+          <app-field [props]="props.card"></app-field>
+        </div>
+        <div class="visa-fields-2">
+          <app-field [props]="props.mmyy"></app-field>
+          <app-field [props]="props.cvc"></app-field>
+        </div>
+      </div>
+    </div>
+    <div class="other-fields">
+      <div>
+        <label class="label" [for]="props.amount.id">Сумма</label>
+        <app-field [props]="props.amount"></app-field>
+      </div>
+      <div>
+        <label class="label" [for]="props.comment.id">Комментарий</label>
+        <app-field [props]="props.comment"></app-field>
+      </div>
+      <div>
+        <label class="label" [for]="props.email.id">Ваша эл.почта</label>
+        <app-field [props]="props.email"></app-field>
+      </div>
+      <button (click)="onSubmit()" [title]="(isFormValid ? '' : 'Форма заполнена неверно')" [class]="'rainbow-btn ' + (isFormValid ? '' : 'disabled')">Заплатить</button>
+    </div>
+  </div>
+</app-page-template>

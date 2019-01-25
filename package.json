@@ -1,0 +1,20 @@
+{
+  "name": "web-dhtml",
+  "version": "1.0.0",
+  "description": "Практическое задание к спецкурсу \"Web & DHTML\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"setup": "npm i && cd client && npm i",
+	"dev": "cd client && npm start",
+	"build": "cd client && npm run build",
+	"start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://trszdev@bitbucket.org/trszdev/web-dhtml.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/trszdev/web-dhtml#readme"
+}

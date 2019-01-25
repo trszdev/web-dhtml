@@ -1,0 +1,99 @@
+input {
+  outline: none;
+  border: 0;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.field, .field-mask {
+  border: 0;
+  padding: 10px;
+  border-bottom: 1px solid #B0B0B0;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  outline: none;
+  font-weight: bold;
+  font-size: 100%;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: color .4s, border .4s;
+}
+
+.placeholder {
+  position: absolute;
+  pointer-events: none;
+  top: 10px;
+  left: 10px;
+  color: #B0B0B0;
+  transition: all .4s;
+}
+
+.hint {
+  color: #B0B0B0;
+  font-size: 70%;
+  left: 50%;
+  min-height: 1.5em;
+  padding-left: 10px;
+  padding-top: .2em;
+  transition: all .4s;
+}
+
+.input-red > .field, .input-red > .field-mask {
+  border-bottom: 1px solid #D8000C;
+}
+
+.input-red > .hint {
+  color: #D8000C;
+}
+
+.input-red-all > .field, .input-red-all > .field-mask {
+  border-bottom: 1px solid #D8000C;
+}
+
+.input-red-all > * {
+  color: #D8000C;
+}
+
+.input-yellow > .field, .input-yellow > .field-mask {
+  border-bottom: 1px solid #eabc04;
+}
+
+.input-yellow > .hint {
+  color: #eabc04;
+}
+
+.input-green > .field, .input-green > .field-mask {
+  border-bottom: 1px solid #4F8A10;
+}
+
+.input-green > .hint {
+  color: #4F8A10;
+}
+
+.field:focus + .field-mask {
+  visibility: hidden;
+}
+
+.field:not(:focus) {
+  opacity: 0;
+}
+
+.field-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}

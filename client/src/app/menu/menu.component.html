@@ -1,0 +1,10 @@
+<div class="menu">
+  <a routerLink="/pay/card" [class]="isSubmenuActive ? 'selected link' : 'link'">Заплатить</a>
+  <a class="link" routerLink="/request-payment" routerLinkActive="selected">
+    Запросить платёж
+  </a>
+</div>
+<div class="submenu" *ngIf="isSubmenuActive">
+  <a class="link" routerLink="/pay/card" routerLinkActive="selected">💳 С карты любого банка</a>
+  <a class="link" routerLink="/pay/bank" routerLinkActive="selected">💻 Из своего интернет-банка</a>
+</div>

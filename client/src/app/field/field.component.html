@@ -1,0 +1,6 @@
+<div [class]="'input input-' + (props.color || 'gray')">
+  <input #input [readonly]="props.readonly" [type]="props.type" [id]="props.id" [(ngModel)]="fieldText" class="field">
+  <input [readonly]="props.readonly" class="field-mask" [(ngModel)]="fieldMask">
+  <div class="placeholder">{{ (fieldText || fieldMask) ? '' : props.placeholder }}</div>
+  <div class="hint">{{ props.hint || (fieldText ? props.placeholder : '') }}</div>
+</div>
