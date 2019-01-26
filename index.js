@@ -26,22 +26,18 @@ app.post('/api/pay-card', function (req, res) {
 });
 
 app.post('/api/pay-bank', function (req, res) {
-  cards.push(req.body);
+  banks.push(req.body);
   console.log('Pay bank', req.body);
   res.sendStatus(200);
 });
 
 app.post('/api/request-payment', function (req, res) {
-  cards.push(req.body);
+  requests.push(req.body);
   console.log('Request payment', req.body);
   res.sendStatus(200);
 });
 
 app.use('/', express.static('client/dist'));
-
-app.get('/favicon.ico', function (_, res) {
-  res.sendFile('client/dist/favicon.ico', { root: __dirname });
-});
 
 app.get('*', function (_, res) {
   res.sendFile('client/dist/index.html', { root: __dirname });

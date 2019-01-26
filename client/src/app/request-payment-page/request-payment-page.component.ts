@@ -11,9 +11,9 @@ import setupValidation from '../validation';
 export class RequestPaymentPageComponent implements OnInit {
   props = {
     from: {
-      regex: /./,
+      regex: /^(\d{10}|\d{12})$/,
       placeholder: 'ИНН или название плательщика',
-      errorHint: 'Это поле нужно обязательно заполнить',
+      errorHint: 'ИНН - 10 или 12 цифр',
     },
     bik: {
       type: 'number',
@@ -54,11 +54,11 @@ export class RequestPaymentPageComponent implements OnInit {
     },
     amount: {
       type: 'number',
-      placeholder: '',
-      errorHint: 'Это поле нужно обязательно заполнить',
+      placeholder: 'от 1000 до 75000₽',
+      errorHint: 'Введите число от 1000 до 75000',
       format: x => `${x}₽`,
-      min: 1,
-      max: 10000000000,
+      min: 1000,
+      max: 75000,
     },
     email: {
       regex: /@/,
